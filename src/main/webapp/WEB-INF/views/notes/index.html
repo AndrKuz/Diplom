@@ -5,14 +5,14 @@
     <title>All notes</title>
 </head>
 <body>
-
+<!--Блок со списком всех заметок-->
 <div th:each="note : ${notes}">
     <a th:href="@{/notes/{id} (id=${note.getId()})}"  th:text="${note.getNote()}">note</a>
 </div>
 
 <br/>
 <hr/>
-
+<!--Ссылка, которая веден на страничку создания новой заметки-->
 <a href="notes/new">New note</a>
 
 </body>

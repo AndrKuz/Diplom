@@ -5,7 +5,7 @@
     <title>New note</title>
 </head>
 <body>
-
+<!--Форма для создания новой заметки-->
 <form th:method="POST" th:action="@{/notes}" th:object="${webNote}">
   <label for="note">Enter note:</label>
   <input type="text" th:field="*{note}" id="note" />

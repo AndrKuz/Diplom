@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Note</title>
 </head>
+<!--Информация по одной заметке-->
 <body>
 <p th:text="${note.getNote()}">NOTE</p>
 <p th:text="${note.getId()}">ID</p>
+<!--Ссылка на форму редактирования заметки-->
 <a th:href="@{/notes/{id}/edit(id=${note.getId()})}">Edit</a>
+<!--Кнопка удаления заметки-->
 <form th:method="DELETE" th:action="@{/notes/{id}(id=${note.getId()})}">
     <input type="submit" value="Delete"/>
 </form>
